@@ -1,0 +1,61 @@
+/* Paleta: Azul Marino Profundo y Gris Pizarra */
+body {
+    font-family: 'Helvetica Neue', Arial, sans-serif;
+    margin: 0;
+    color: #2D3748;
+    line-height: 1.6;
+}
+
+header {
+    background: #ffffff;
+    border-bottom: 2px solid #1A365D;
+    padding: 20px 0;
+}
+
+nav {
+    max-width: 1100px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: #1A365D;
+}
+
+/* Hero Section: Corporativo Ejecutivo */
+.hero {
+    background: #1A365D; /* Azul Marino */
+    color: white;
+    padding: 100px 20px;
+    text-align: center;
+}
+
+.hero h1 { font-size: 3rem; margin-bottom: 10px; }
+
+.btn {
+    background: #E2E8F0;
+    color: #1A365D;
+    padding: 15px 30px;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 4px;
+}
+
+/* Grid de Servicios */
+.grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    max-width: 1100px;
+    margin: 40px auto;
+}
+
+.card {
+    padding: 30px;
+    border: 1px solid #E2E8F0;
+    text-align: center;
+}
