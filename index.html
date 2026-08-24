@@ -3,38 +3,333 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Zuma Business Group | Consultoría Fiscal y Contable</title>
+    <title>Zuma Business Group | Contabilidad Inteligente y FinTech</title>
     <link rel="stylesheet" href="style.css">
+    <!-- Tipografía moderna Inter -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 </head>
 <body>
 
+    <!-- Barra de Navegación -->
     <header>
         <nav>
-            <div class="logo">ZUMA <span style="font-weight: 300;">Business Group</span></div>
+            <div class="logo">
+                <!-- Espacio para Logo transparente con R -->
+                ZUMA <span>BG</span>
+            </div>
+            <div class="slogan-bar">"Estrategia en Acción"</div>
             <ul>
                 <li><a href="#inicio">Inicio</a></li>
                 <li><a href="#servicios">Servicios</a></li>
+                <li><a href="#quienes-somos">Quiénes Somos</a></li>
+                <li><a href="#cotizacion" class="nav-btn">Cotizador</a></li>
                 <li><a href="#contacto">Contacto</a></li>
             </ul>
         </nav>
     </header>
 
+    <!-- Sección Inicio -->
     <section id="inicio" class="hero">
         <div class="hero-content">
-            <h1>Soluciones fiscales para tu empresa</h1>
-            <p>"Contadores, ¡más soluciones!"</p>
-            <a href="#contacto" class="btn">Agendar Asesoría</a>
+            <h1>Contabilidad Inteligente</h1>
+            <p class="hero-subtitle">Contabilidad 100% digital, segura y sin papel.</p>
+            <div class="hero-features">
+                <div class="feature-item">
+                    <strong>Información 24/7:</strong> Su contabilidad al alcance de su mano, respaldada de forma segura en nuestro ecosistema digital.
+                </div>
+                <div class="feature-item">
+                    <strong>Gestión eficiente:</strong> Opere su negocio con la certeza de que sus números están en orden y siempre al día.
+                </div>
+                <div class="feature-item">
+                    <strong>Acompañamiento experto:</strong> Tecnología de punta combinada con el trato humano de profesionales listos para atenderle a una llamada de distancia.
+                </div>
+            </div>
+            <a href="#cotizacion" class="btn-primary">Solicita tu Cotización</a>
         </div>
     </section>
 
-    <section id="servicios">
-        <h2>Nuestros Servicios</h2>
-        <div class="grid">
-            <div class="card"><h3>Estrategia Fiscal</h3></div>
-            <div class="card"><h3>Auditorías</h3></div>
-            <div class="card"><h3>Nómina e IMSS</h3></div>
+    <!-- Sección Planes a tu Medida -->
+    <section class="plans-section">
+        <div class="container">
+            <h2>Planes a tu Medida</h2>
+            <p class="section-desc">Diseñados para brindarle tranquilidad y control total de su contabilidad. Ofrecemos soluciones personalizadas según su régimen fiscal:</p>
+            
+            <div class="plans-grid">
+                <div class="plan-card">
+                    <h3>Plan Godínez</h3>
+                    <p class="plan-target">Especializado para Asalariados.</p>
+                </div>
+                <div class="plan-card">
+                    <h3>Plan Profesionistas</h3>
+                    <p class="plan-target">Ideal para Honorarios, Actividades Empresariales y RESICO.</p>
+                </div>
+                <div class="plan-card">
+                    <h3>Plan Rentas</h3>
+                    <p class="plan-target">Enfocado en Arrendamiento.</p>
+                </div>
+                <div class="plan-card">
+                    <h3>Plan Empresas</h3>
+                    <p class="plan-target">Soluciones integrales para Persona Moral.</p>
+                </div>
+            </div>
+
+            <div class="service-scope">
+                <h3>¿Qué incluye su servicio integral?</h3>
+                <ul>
+                    <li><strong>Expediente Electrónico 24/7:</strong> Acceso organizado a sus facturas (emitidas/recibidas), estados de cuenta, constancias, estados financieros y declaraciones.</li>
+                    <li><strong>Gestión Contable:</strong> Registro contable, conciliaciones bancarias y balanzas de comprobación.</li>
+                    <li><strong>Cumplimiento Fiscal:</strong> Cálculo y presentación de declaraciones mensuales y anuales (IVA, ISR, etc.) con enfoque en el correcto cumplimiento ante el SAT.</li>
+                    <li><strong>Asesoría Continua:</strong> Soporte especializado en temas contables, fiscales y administrativos.</li>
+                </ul>
+            </div>
         </div>
     </section>
+
+    <!-- Mesa de Ayuda y Soporte -->
+    <section class="support-section">
+        <div class="container support-box">
+            <h2>Mesa de Ayuda y Soporte</h2>
+            <p>Soporte experto cuando lo necesites. Nos comunicamos con usted de forma ágil y personalizada a través de nuestro chat en línea o vía telefónica. Nuestro equipo de asesores profesionales está listo para resolver de inmediato cualquier consulta técnica, contable, fiscal o administrativa de su negocio.</p>
+            <div class="contact-highlights">
+                <span>📞 Teléfono Directo: <strong>55 45033977</strong></span>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sección Servicios -->
+    <section id="servicios" class="services-section">
+        <div class="container">
+            <h2>Nuestros Servicios</h2>
+            
+            <div class="service-category">
+                <h3>1. Consultoría Administrativa y de Procesos</h3>
+                <ul class="service-list">
+                    <li><strong>Diagnóstico y Mejora:</strong> Evaluación integral del funcionamiento de procesos, áreas o empresas para estructurar propuestas de mejora continua.</li>
+                    <li><strong>Gestión del Talento:</strong> Integración estratégica del capital humano.</li>
+                    <li><strong>Optimización Tecnológica:</strong> Diseño de modelos de mejora mediante mapeo/alineación de procesos y formulación de indicadores de productividad.</li>
+                    <li><strong>Sistemas de Calidad:</strong> Desarrollo, planeación e implementación de Sistemas de Gestión con enfoque a certificación bajo la norma ISO 9000.</li>
+                    <li><strong>Creación y Asesoría:</strong> Apoyo especializado para el nacimiento y consolidación de MiPyMEs.</li>
+                </ul>
+            </div>
+
+            <div class="service-category">
+                <h3>2. Servicios Contables y Fiscales</h3>
+                <div class="fiscal-grid">
+                    <div class="fiscal-box">
+                        <h4>Para Personas Físicas</h4>
+                        <ul>
+                            <li>Determinación, cálculo y presentación de impuestos federales (ISR, IVA y retenciones) mensual y anual.</li>
+                            <li>Presentación de declaraciones informativas (DIOT) y contabilidad electrónica conforme al SAT.</li>
+                            <li>Gestión de trámites ante la SHCP (RFC) y solicitudes de devoluciones de impuestos.</li>
+                            <li>Asesoría en control interno y administrativo para asegurar eficiencia operacional.</li>
+                        </ul>
+                    </div>
+                    <div class="fiscal-box">
+                        <h4>Para Personas Morales</h4>
+                        <ul>
+                            <li>Análisis, clasificación y registro de operaciones con conciliaciones mensuales.</li>
+                            <li>Generación de balanzas de comprobación, estados financieros clave y análisis fiscal.</li>
+                            <li>Cumplimiento fiscal completo: declaraciones mensuales, anuales, DIOT y contabilidad electrónica.</li>
+                            <li>Gestión integral de recursos humanos (nóminas, retenciones, incidencias).</li>
+                            <li>Gestión patronal IMSS, INFONAVIT e Impuesto Sobre Nómina local.</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <div class="service-category">
+                <h3>3. Asesoría Integral Especializada</h3>
+                <div class="badges-row">
+                    <span class="badge">Contable y Financiera</span>
+                    <span class="badge">Fiscal y de Negocios</span>
+                    <span class="badge">Empresarial y Laboral</span>
+                    <span class="badge">Sistemas y Tecnologías</span>
+                </div>
+            </div>
+
+            <div class="service-category">
+                <h3>4. Cobranza con Aseguradoras</h3>
+                <p>Nos encargamos de todo el proceso administrativo para que usted se concentre en sus pacientes. Servicio especializado en gestión y trámite de cobro de honorarios médicos:</p>
+                <div class="insurance-steps">
+                    <div class="step">
+                        <h4>Alta y Registro Inicial</h4>
+                        <p>Gestión de formatos, recolección de firmas, carga de documentación (estado de cuenta, cédula, constancia) y accesos a plataformas.</p>
+                    </div>
+                    <div class="step">
+                        <h4>Gestión y Seguimiento</h4>
+                        <p>Emisión de factura, trámite de carta de cobro bajo normatividad de cada aseguradora y seguimiento hasta la aplicación del pago.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sección Quiénes Somos -->
+    <section id="quienes-somos" class="about-section">
+        <div class="container">
+            <h2>Quiénes Somos</h2>
+            <div class="about-card">
+                <h3>Identidad Corporativa</h3>
+                <p>Zuma Business Group es una empresa integrada por expertos profesionales que brinda soluciones contables, financieras, fiscales y administrativas, con apego absoluto a las disposiciones legales y reglamentarias vigentes. La atención oportuna y eficiente nos distingue como una organización totalmente comprometida con la mejora continua y la satisfacción total del cliente.</p>
+            </div>
+
+            <div class="mission-vision-grid">
+                <div class="mv-box">
+                    <h3>Misión</h3>
+                    <p>Solucionar eficaz y profesionalmente las necesidades contables, fiscales, financieras y administrativas de nuestros clientes, garantizando un servicio integral de calidad y con un apego estricto a la normatividad vigente.</p>
+                </div>
+                <div class="mv-box">
+                    <h3>Visión</h3>
+                    <p>Consolidarnos como una firma líder en servicios contables, fiscales y administrativos a nivel regional, destacándonos por la integración constante de herramientas tecnológicas de vanguardia que optimicen la operación y el crecimiento de nuestros clientes.</p>
+                </div>
+            </div>
+
+            <div class="values-box">
+                <h3>Nuestros Valores</h3>
+                <div class="values-list">
+                    <span>Honestidad</span>
+                    <span>Integridad</span>
+                    <span>Cooperación</span>
+                    <span>Servicio al cliente</span>
+                    <span>Compromiso</span>
+                    <span>Mejora continua</span>
+                </div>
+            </div>
+
+            <div class="objectives-box">
+                <h3>Objetivos</h3>
+                <ul>
+                    <li>Integrar a Zuma Business Group en el mercado de los servicios contables, fiscales, financieros y administrativos mediante el ofrecimiento y manejo de herramientas tecnológicas de vanguardia.</li>
+                    <li>Solucionar eficaz y profesionalmente las necesidades de nuestros clientes.</li>
+                    <li>Optimizar las operaciones de nuestros clientes mediante la aplicación de estrategias adecuadas a sus necesidades específicas.</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sección Cotización -->
+    <section id="cotizacion" class="quote-section">
+        <div class="container quote-container">
+            <h2>Cotización en Línea</h2>
+            <p>Para realizar su cotización por favor indíquenos sus requerimientos:</p>
+            
+            <form class="quote-form">
+                <div class="form-group">
+                    <label>Nombre*</label>
+                    <input type="text" required placeholder="Tu nombre completo">
+                </div>
+                <div class="form-group">
+                    <label>Email*</label>
+                    <input type="email" required placeholder="correo@ejemplo.com">
+                </div>
+                <div class="form-group">
+                    <label>Teléfono de Contacto*</label>
+                    <input type="tel" required placeholder="55 45033977">
+                </div>
+                <div class="form-group">
+                    <label>Tipo de Plan Requerido*</label>
+                    <select required>
+                        <option value="">—Por favor, elige una opción—</option>
+                        <option>Plan Godínez</option>
+                        <option>Plan Profesionistas</option>
+                        <option>Plan Rentas</option>
+                        <option>Plan Empresas</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label>Personalidad Jurídica*</label>
+                    <select required>
+                        <option value="">—Por favor, elige una opción—</option>
+                        <option>Física</option>
+                        <option>Moral</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label>Número de Operaciones diarias*</label>
+                    <input type="number" required placeholder="Ej. 15">
+                </div>
+                <div class="form-group">
+                    <label>Número de empleados*</label>
+                    <input type="number" required placeholder="Ej. 5">
+                </div>
+                <div class="form-group">
+                    <label>Requiere nóminas*</label>
+                    <select required>
+                        <option value="">—Por favor, elige una opción—</option>
+                        <option>Si</option>
+                        <option>No</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label>Requiere apoyo en generación de CFDIS*</label>
+                    <select required>
+                        <option value="">—Por favor, elige una opción—</option>
+                        <option>Si</option>
+                        <option>No</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label>Realiza importaciones*</label>
+                    <select required>
+                        <option value="">—Por favor, elige una opción—</option>
+                        <option>Si</option>
+                        <option>No</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label>Requiere estados financieros*</label>
+                    <select required>
+                        <option value="">—Por favor, elige una opción—</option>
+                        <option>Si</option>
+                        <option>No</option>
+                    </select>
+                </div>
+                <button type="submit" class="btn-primary full-width">Enviar Solicitud de Cotización</button>
+            </form>
+        </div>
+    </section>
+
+    <!-- Sección Contacto -->
+    <section id="contacto" class="contact-section">
+        <div class="container contact-container">
+            <h2>Datos de Contacto</h2>
+            <div class="contact-info">
+                <p>📧 Correo: <a href="mailto:contacto@zumabg.com.mx">contacto@zumabg.com.mx</a></p>
+                <p>📱 Teléfono y WhatsApp: <a href="https://wa.me/525545033977" target="_blank">55 45033977</a></p>
+            </div>
+
+            <form class="general-form">
+                <div class="form-group">
+                    <label>Nombre*</label>
+                    <input type="text" required>
+                </div>
+                <div class="form-group">
+                    <label>Email*</label>
+                    <input type="email" required>
+                </div>
+                <div class="form-group">
+                    <label>Teléfono*</label>
+                    <input type="tel" required>
+                </div>
+                <div class="form-group">
+                    <label>Asunto:</label>
+                    <input type="text">
+                </div>
+                <div class="form-group">
+                    <label>Mensaje:</label>
+                    <textarea rows="4"></textarea>
+                </div>
+                <button type="submit" class="btn-primary">Enviar Mensaje</button>
+            </form>
+        </div>
+    </section>
+
+    <!-- Pie de Página -->
+    <footer>
+        <div class="container">
+            <p>&copy; 2026 Zuma Business Group. Todos los derechos reservados. | Estrategia en Acción</p>
+        </div>
+    </footer>
 
 </body>
 </html>
