@@ -1,124 +1,543 @@
-/* Estilos generales y tipografía */
+/* --- Estilos Generales FinTech --- */
 body {
-    font-family: 'Helvetica Neue', Arial, sans-serif;
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
     margin: 0;
     padding: 0;
-    color: #2D3748;
+    background-color: #0B132B; /* Azul financiero profundo */
+    color: #E2E8F0;
     line-height: 1.6;
-    background-color: #ffffff;
 }
 
-/* Barra de navegación */
+.container {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* --- Barra de Navegación --- */
 header {
-    background: #ffffff;
-    border-bottom: 2px solid #1A365D;
-    padding: 15px 0;
+    background: rgba(11, 19, 43, 0.95);
+    backdrop-filter: blur(10px);
+    border-bottom: 1px solid #1E293B;
     position: sticky;
     top: 0;
     z-index: 1000;
 }
 
 nav {
-    max-width: 1100px;
-    margin: 0 auto;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 0 20px;
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 15px 20px;
 }
 
 .logo {
-    font-size: 1.5rem;
+    font-size: 1.4rem;
     font-weight: 700;
-    color: #1A365D;
+    color: #FFFFFF;
+    letter-spacing: 1px;
+}
+
+.logo span {
+    color: #38BDF8;
+}
+
+.slogan-bar {
+    font-size: 0.95rem;
+    color: #38BDF8;
+    font-weight: 600;
+    font-style: italic;
+    background: rgba(56, 189, 248, 0.1);
+    padding: 5px 12px;
+    border-radius: 20px;
+    border: 1px solid rgba(56, 189, 248, 0.3);
 }
 
 nav ul {
     list-style: none;
     display: flex;
-    gap: 30px;
+    gap: 20px;
+    align-items: center;
     margin: 0;
     padding: 0;
 }
 
 nav ul li a {
     text-decoration: none;
-    color: #2D3748;
-    font-weight: 600;
-    transition: color 0.3s;
+    color: #94A3B8;
+    font-weight: 500;
+    font-size: 0.9rem;
+    transition: color 0.2s;
 }
 
 nav ul li a:hover {
-    color: #1A365D;
+    color: #38BDF8;
 }
 
-/* Sección Hero: Corporativo Ejecutivo */
+.nav-btn {
+    background: #0284C7;
+    color: white !important;
+    padding: 8px 16px;
+    border-radius: 6px;
+    transition: background 0.2s;
+}
+
+.nav-btn:hover {
+    background: #0369A1;
+}
+
+/* --- Sección Hero --- */
 .hero {
-    background: #1A365D; /* Azul Marino */
-    color: white;
+    background: linear-gradient(135deg, #0B132B 0%, #1C2541 100%);
     padding: 100px 20px;
     text-align: center;
+    border-bottom: 1px solid #1E293B;
 }
 
-.hero h1 { 
-    font-size: 3rem; 
-    margin-bottom: 10px; 
-}
-
-.hero p {
-    font-size: 1.2rem;
-    margin-bottom: 30px;
-    opacity: 0.9;
-}
-
-.btn {
-    background: #E2E8F0;
-    color: #1A365D;
-    padding: 15px 30px;
-    text-decoration: none;
-    font-weight: bold;
-    border-radius: 4px;
-    transition: background 0.3s;
-}
-
-.btn:hover {
-    background: #cbd5e0;
-}
-
-/* Sección de Servicios */
-#servicios {
-    padding: 60px 20px;
-    text-align: center;
-}
-
-#servicios h2 {
-    font-size: 2rem;
-    margin-bottom: 40px;
-    color: #1A365D;
-}
-
-.grid {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 20px;
-    max-width: 1100px;
+.hero-content {
+    max-width: 850px;
     margin: 0 auto;
 }
 
-.card {
-    padding: 40px 20px;
-    border: 1px solid #E2E8F0;
+.hero h1 {
+    font-size: 2.8rem;
+    color: #FFFFFF;
+    margin-bottom: 15px;
+    letter-spacing: -0.5px;
+}
+
+.hero-subtitle {
+    font-size: 1.3rem;
+    color: #38BDF8;
+    font-weight: 600;
+    margin-bottom: 30px;
+}
+
+.hero-features {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+    text-align: left;
+    margin-bottom: 40px;
+}
+
+.feature-item {
+    background: #1C2541;
+    padding: 20px;
+    border-radius: 10px;
+    border: 1px solid #3A506B;
+}
+
+/* --- Botones --- */
+.btn-primary {
+    display: inline-block;
+    background: #0EA5E9;
+    color: white;
+    padding: 12px 28px;
+    text-decoration: none;
+    font-weight: 600;
+    border-radius: 8px;
+    box-shadow: 0 4px 14px rgba(14, 165, 233, 0.4);
+    transition: all 0.2s ease;
+    border: none;
+    cursor: pointer;
+}
+
+.btn-primary:hover {
+    background: #0284C7;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(14, 165, 233, 0.6);
+}
+
+.full-width {
+    width: 100%;
+}
+
+/* --- Secciones Generales --- */
+section {
+    padding: 80px 20px;
+}
+
+h2 {
     text-align: center;
-    border-radius: 4px;
-    transition: transform 0.3s;
+    font-size: 2.2rem;
+    color: #FFFFFF;
+    margin-bottom: 40px;
 }
 
-.card:hover {
-    box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+.section-desc {
+    text-align: center;
+    color: #94A3B8;
+    max-width: 700px;
+    margin: 0 auto 40px auto;
+}
+
+/* --- Planes --- */
+.plans-section {
+    background-color: #0B132B;
+}
+
+.plans-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 20px;
+    margin-bottom: 50px;
+}
+
+.plan-card {
+    background: #1C2541;
+    padding: 25px;
+    border-radius: 12px;
+    border: 1px solid #3A506B;
+    text-align: center;
+    transition: transform 0.3s ease, border-color 0.3s ease;
+}
+
+.plan-card:hover {
     transform: translateY(-5px);
+    border-color: #38BDF8;
 }
 
-.card h3 {
+.plan-card h3 {
+    color: #38BDF8;
+    margin-bottom: 10px;
+}
+
+.plan-target {
+    color: #94A3B8;
+    font-size: 0.9rem;
     margin: 0;
-    color: #1A365D;
+}
+
+.service-scope {
+    background: #1C2541;
+    padding: 35px;
+    border-radius: 12px;
+    border: 1px solid #3A506B;
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.service-scope h3 {
+    color: #FFFFFF;
+    margin-bottom: 20px;
+}
+
+.service-scope ul {
+    color: #94A3B8;
+    padding-left: 20px;
+}
+
+.service-scope li {
+    margin-bottom: 12px;
+}
+
+/* --- Soporte --- */
+.support-section {
+    background: #1C2541;
+    border-top: 1px solid #3A506B;
+    border-bottom: 1px solid #3A506B;
+}
+
+.support-box {
+    max-width: 800px;
+    text-align: center;
+}
+
+.support-box p {
+    color: #94A3B8;
+    font-size: 1.05rem;
+    margin-bottom: 25px;
+}
+
+.contact-highlights span {
+    background: #0B132B;
+    padding: 10px 20px;
+    border-radius: 8px;
+    border: 1px solid #38BDF8;
+    color: #38BDF8;
+    font-size: 1.1rem;
+}
+
+/* --- Servicios --- */
+.services-section {
+    background-color: #0B132B;
+}
+
+.service-category {
+    background: #1C2541;
+    padding: 35px;
+    border-radius: 12px;
+    border: 1px solid #3A506B;
+    margin-bottom: 30px;
+    max-width: 950px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.service-category h3 {
+    color: #38BDF8;
+    font-size: 1.4rem;
+    margin-bottom: 20px;
+}
+
+.service-list {
+    color: #94A3B8;
+    padding-left: 20px;
+}
+
+.service-list li {
+    margin-bottom: 12px;
+}
+
+.fiscal-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 25px;
+}
+
+.fiscal-box {
+    background: #0B132B;
+    padding: 25px;
+    border-radius: 8px;
+    border: 1px solid #3A506B;
+}
+
+.fiscal-box h4 {
+    color: #FFFFFF;
+    margin-top: 0;
+    margin-bottom: 15px;
+}
+
+.fiscal-box ul {
+    color: #94A3B8;
+    padding-left: 15px;
+    font-size: 0.9rem;
+    margin: 0;
+}
+
+.fiscal-box li {
+    margin-bottom: 10px;
+}
+
+.badges-row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+
+.badge {
+    background: #0B132B;
+    color: #38BDF8;
+    padding: 10px 20px;
+    border-radius: 20px;
+    border: 1px solid #38BDF8;
+    font-weight: 500;
+}
+
+.insurance-steps {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 20px;
+    margin-top: 20px;
+}
+
+.step {
+    background: #0B132B;
+    padding: 20px;
+    border-radius: 8px;
+    border: 1px solid #3A506B;
+}
+
+.step h4 {
+    color: #FFFFFF;
+    margin-top: 0;
+}
+
+.step p {
+    color: #94A3B8;
+    font-size: 0.9rem;
+    margin-bottom: 0;
+}
+
+/* --- Quiénes Somos --- */
+.about-section {
+    background-color: #1C2541;
+}
+
+.about-card {
+    background: #0B132B;
+    padding: 30px;
+    border-radius: 12px;
+    border: 1px solid #3A506B;
+    margin-bottom: 30px;
+}
+
+.about-card h3 {
+    color: #38BDF8;
+    margin-top: 0;
+}
+
+.about-card p {
+    color: #94A3B8;
+    margin-bottom: 0;
+}
+
+.mission-vision-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+    margin-bottom: 30px;
+}
+
+.mv-box {
+    background: #0B132B;
+    padding: 30px;
+    border-radius: 12px;
+    border: 1px solid #3A506B;
+}
+
+.mv-box h3 {
+    color: #38BDF8;
+    margin-top: 0;
+}
+
+.mv-box p {
+    color: #94A3B8;
+    margin-bottom: 0;
+}
+
+.values-box {
+    background: #0B132B;
+    padding: 30px;
+    border-radius: 12px;
+    border: 1px solid #3A506B;
+    margin-bottom: 30px;
+    text-align: center;
+}
+
+.values-box h3 {
+    color: #38BDF8;
+    margin-top: 0;
+    margin-bottom: 20px;
+}
+
+.values-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 15px;
+}
+
+.values-list span {
+    background: #1C2541;
+    color: #E2E8F0;
+    padding: 8px 16px;
+    border-radius: 6px;
+    border: 1px solid #3A506B;
+    font-weight: 500;
+}
+
+.objectives-box {
+    background: #0B132B;
+    padding: 30px;
+    border-radius: 12px;
+    border: 1px solid #3A506B;
+}
+
+.objectives-box h3 {
+    color: #38BDF8;
+    margin-top: 0;
+}
+
+.objectives-box ul {
+    color: #94A3B8;
+    padding-left: 20px;
+    margin-bottom: 0;
+}
+
+.objectives-box li {
+    margin-bottom: 10px;
+}
+
+/* --- Cotizador y Contacto --- */
+.quote-section, .contact-section {
+    background-color: #0B132B;
+}
+
+.quote-container, .contact-container {
+    max-width: 700px;
+    background: #1C2541;
+    padding: 40px;
+    border-radius: 12px;
+    border: 1px solid #3A506B;
+}
+
+.quote-container p {
+    color: #94A3B8;
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-group label {
+    display: block;
+    color: #E2E8F0;
+    font-size: 0.9rem;
+    margin-bottom: 8px;
+    font-weight: 500;
+}
+
+.form-group input, 
+.form-group select, 
+.form-group textarea {
+    width: 100%;
+    padding: 12px;
+    background: #0B132B;
+    border: 1px solid #3A506B;
+    border-radius: 6px;
+    color: #FFFFFF;
+    font-family: 'Inter', sans-serif;
+    box-sizing: border-box;
+}
+
+.form-group input:focus, 
+.form-group select:focus, 
+.form-group textarea:focus {
+    outline: none;
+    border-color: #38BDF8;
+}
+
+.contact-info {
+    text-align: center;
+    margin-bottom: 30px;
+    background: #0B132B;
+    padding: 20px;
+    border-radius: 8px;
+    border: 1px solid #3A506B;
+}
+
+.contact-info p {
+    color: #94A3B8;
+    margin: 5px 0;
+}
+
+.contact-info a {
+    color: #38BDF8;
+    text-decoration: none;
+}
+
+/* --- Footer --- */
+footer {
+    background-color: #070C1B;
+    color: #64748B;
+    padding: 30px 20px;
+    text-align: center;
+    border-top: 1px solid #1E293B;
+    font-size: 0.85rem;
 }
