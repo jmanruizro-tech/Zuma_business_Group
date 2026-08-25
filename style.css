@@ -340,9 +340,9 @@ footer { background-color: #070C1B; color: #64748B; padding: 30px 20px; text-ali
 
 
 /* ==========================================================
-   --- OPTIMIZACIÓN MÓVIL (iPhone / iOS) ---
+   --- OPTIMIZACIÓN MÓVIL (iPhone / Android) ---
    ========================================================== */
-@media (max-width: 950px) { /* Aumentamos el ancho de corte para proteger la barra superior */
+@media (max-width: 950px) { 
     
     header { position: relative !important; }
     
@@ -410,5 +410,21 @@ footer { background-color: #070C1B; color: #64748B; padding: 30px 20px; text-ali
         width: 100% !important;
         box-sizing: border-box !important;
         padding: 20px 15px !important;
+    }
+
+    /* --- CORRECCIÓN: Caja de teléfono en iPhone SE --- */
+    .contact-highlights span {
+        display: block !important;
+        width: 100%;
+        box-sizing: border-box;
+        font-size: 0.9rem;
+        padding: 15px 10px;
+        margin: 0 auto;
+    }
+
+    .contact-highlights span a {
+        color: #38BDF8 !important;
+        text-decoration: none !important;
+        font-weight: bold;
     }
 }
