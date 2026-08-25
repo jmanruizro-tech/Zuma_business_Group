@@ -51,7 +51,7 @@ nav {
 
 /* Logo Agrandado y convertido a Blanco Puro */
 .brand-logo {
-    height: 70px !important; 
+    height: 65px !important; 
     width: auto;
     object-fit: contain;
     filter: brightness(0) invert(1); /* 🪄 Magia: Convierte todo el logo a blanco */
