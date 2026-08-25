@@ -603,92 +603,62 @@ footer {
     object-fit: contain;
 }
 
-
 /* ==========================================================
-   --- CORRECCIÓN DEFINITIVA PARA MÓVIL (iPhones / Celulares) ---
+   --- CORRECCIÓN FINES DE DISEÑO MÓVIL (iPhone / ANDROID) ---
    ========================================================== */
 @media (max-width: 768px) {
-    /* 1. Navegación en columna para que no se amontone el menú */
+    /* 1. Menú de navegación ordenado en una sola fila compacta o lista limpia */
     nav {
         flex-direction: column;
-        gap: 12px;
-        padding: 12px 15px;
+        gap: 8px;
+        padding: 10px 10px;
+    }
+    .brand-logo {
+        height: 32px; /* Logo ligeramente más compacto en móvil */
     }
     .slogan-bar {
-        font-size: 0.85rem;
-        padding: 4px 10px;
+        font-size: 0.8rem;
+        padding: 3px 8px;
+        margin-bottom: 5px;
     }
     nav ul {
+        display: flex;
+        flex-direction: row;
         flex-wrap: wrap;
         justify-content: center;
-        gap: 10px;
+        gap: 8px 12px;
         padding: 0;
+        margin: 0;
     }
     nav ul li a {
         font-size: 0.85rem;
+        padding: 4px 6px;
+    }
+    .nav-btn {
+        padding: 5px 12px !important;
     }
 
-    /* 2. Sección Hero adaptada */
-    .hero {
-        padding: 70px 15px 50px 15px !important;
+    /* 2. Corrección de la caja de teléfono en Soporte */
+    .contact-highlights span {
+        display: inline-block;
+        width: 100%;
+        box-sizing: border-box;
+        font-size: 0.95rem;
+        padding: 12px 10px;
+        word-break: break-word; /* Evita que el número se corte de forma extraña */
     }
-    .hero h1 {
-        font-size: 1.9rem !important;
-        line-height: 1.2;
-    }
-    .hero-subtitle {
-        font-size: 1.05rem !important;
-        margin-bottom: 20px;
-    }
-    .hero-features {
-        display: flex !important;
-        flex-direction: column !important;
-        gap: 15px !important;
-        margin-bottom: 25px !important;
-    }
-    .hero .feature-item {
+
+    /* 3. Ajuste de formularios para que los botones no rebasen contenedores */
+    .quote-container, .contact-container {
+        padding: 20px 12px !important;
         width: 100% !important;
         box-sizing: border-box !important;
-        padding: 15px !important;
     }
-
-    /* 3. Espaciado general de secciones en móvil */
-    section {
-        padding: 45px 15px !important;
+    .quote-container form, .contact-container form {
+        width: 100%;
     }
-    h2 {
-        font-size: 1.6rem !important;
-        margin-bottom: 20px !important;
-    }
-
-    /* 4. Forzar una sola columna vertical en todas las cuadrículas */
-    .plans-grid, 
-    .fiscal-grid, 
-    .insurance-steps, 
-    .mission-vision-grid {
-        display: flex !important;
-        flex-direction: column !important;
-        gap: 15px !important;
-    }
-    
-    .service-scope, 
-    .service-category, 
-    .about-card, 
-    .mv-box, 
-    .values-box, 
-    .objectives-box,
-    .quote-container, 
-    .contact-container {
+    .btn-primary.full-width, .contact-container .btn-primary {
         width: 100% !important;
         box-sizing: border-box !important;
-        padding: 20px 15px !important;
-        margin-left: 0 !important;
-        margin-right: 0 !important;
-    }
-
-    /* 5. Ajuste del halo de luz */
-    .hero-glow {
-        width: 100% !important;
-        height: 200px !important;
     }
 }
