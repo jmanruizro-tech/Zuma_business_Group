@@ -58,17 +58,17 @@ nav {
     filter: drop-shadow(0px 0px 3px rgba(11, 19, 43, 0.9)) contrast(1.15) saturate(1.1);
 }
 
-/* Botón de WhatsApp */
+/* Botón de WhatsApp integrado al estilo Azul FinTech */
 .nav-whatsapp {
     display: flex;
     flex-direction: row;
     align-items: center;
     gap: 6px;
-    background: rgba(34, 197, 94, 0.15);
-    border: 1px solid rgba(34, 197, 94, 0.4);
+    background: rgba(56, 189, 248, 0.1);
+    border: 1px solid rgba(56, 189, 248, 0.3);
     padding: 6px 14px;
     border-radius: 20px;
-    color: #4ade80;
+    color: #38BDF8; /* Azul claro corporativo */
     text-decoration: none;
     font-weight: 600;
     font-size: 0.95rem;
@@ -76,8 +76,8 @@ nav {
 }
 
 .nav-whatsapp:hover {
-    background: rgba(34, 197, 94, 0.25);
-    border-color: #22c55e;
+    background: rgba(56, 189, 248, 0.2);
+    border-color: #38BDF8;
     transform: translateY(-2px);
 }
 
@@ -85,7 +85,7 @@ nav {
     width: 18px !important;
     height: 18px !important;
     min-width: 18px;
-    fill: #22c55e;
+    fill: #38BDF8 !important; /* Icono en azul */
     flex-shrink: 0;
 }
 
