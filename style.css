@@ -30,10 +30,19 @@ nav {
     align-items: center;
     max-width: 1100px;
     margin: 0 auto;
-    padding: 12px 20px;
+    padding: 10px 20px;
+    gap: 20px;
 }
 
-/* Logo Agrandado */
+/* Grupo Izquierdo en orden exacto: Logo -> WhatsApp -> Eslogan */
+.nav-left-group {
+    display: flex;
+    align-items: center;
+    gap: 18px;
+    flex-wrap: nowrap;
+}
+
+/* Logo Agrandado y Estilizado */
 .logo-container {
     display: flex;
     align-items: center;
@@ -45,17 +54,50 @@ nav {
     object-fit: contain;
 }
 
+/* Botón de WhatsApp con el tamaño perfecto */
+.nav-whatsapp {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    background: rgba(34, 197, 94, 0.12);
+    border: 1px solid rgba(34, 197, 94, 0.35);
+    padding: 5px 12px;
+    border-radius: 20px;
+    color: #4ade80;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 0.9rem;
+    transition: all 0.2s ease;
+    white-space: nowrap;
+}
+
+.nav-whatsapp:hover {
+    background: rgba(34, 197, 94, 0.22);
+    border-color: #22c55e;
+    transform: translateY(-1px);
+}
+
+.whatsapp-icon {
+    width: 18px;
+    height: 18px;
+    fill: #22c55e;
+    flex-shrink: 0;
+}
+
+/* Eslogan */
 .slogan-bar {
-    font-size: 0.95rem;
+    font-size: 0.9rem;
     color: #38BDF8;
     font-weight: 600;
     font-style: italic;
     background: rgba(56, 189, 248, 0.1);
-    padding: 5px 12px;
+    padding: 4px 10px;
     border-radius: 20px;
     border: 1px solid rgba(56, 189, 248, 0.3);
+    white-space: nowrap;
 }
 
+/* Menús Derechos Originales */
 .nav-links {
     list-style: none;
     display: flex;
@@ -87,35 +129,6 @@ nav {
 
 .nav-btn:hover {
     background: #0369A1;
-}
-
-/* Botón de WhatsApp en la barra superior (Escritorio) */
-.nav-whatsapp {
-    display: flex;
-    align-items: center;
-    gap: 8px;
-    background: rgba(34, 197, 94, 0.15);
-    border: 1px solid rgba(34, 197, 94, 0.4);
-    padding: 6px 14px;
-    border-radius: 20px;
-    color: #4ade80;
-    text-decoration: none;
-    font-weight: 600;
-    font-size: 0.9rem;
-    transition: all 0.2s ease;
-}
-
-.nav-whatsapp:hover {
-    background: rgba(34, 197, 94, 0.25);
-    border-color: #22c55e;
-    transform: translateY(-1px);
-}
-
-.whatsapp-icon {
-    width: 18px;
-    height: 18px;
-    fill: #22c55e;
-    flex-shrink: 0;
 }
 
 /* --- Sección Hero con Tinte Azul Muy Tenue, Brillo y Láser --- */
@@ -646,7 +659,6 @@ footer {
    --- OPTIMIZACIÓN MÓVIL PERFECTA (iPhone / iOS) ---
    ========================================================== */
 @media (max-width: 768px) {
-    /* La barra superior se desplaza de manera natural con la página (no se fija estorbando) */
     header {
         position: relative !important;
     }
@@ -654,32 +666,33 @@ footer {
     nav {
         flex-direction: column;
         align-items: center;
-        gap: 10px;
+        gap: 12px;
         padding: 12px 10px;
     }
+
+    .nav-left-group {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 10px;
+    }
+
     .brand-logo {
         height: 44px;
     }
-    .slogan-bar {
-        font-size: 0.78rem;
-        padding: 3px 10px;
-        margin-bottom: 2px;
+
+    .nav-whatsapp {
+        padding: 4px 10px;
+        font-size: 0.8rem;
     }
 
-    /* Icono de WhatsApp con tamaño controlado y proporcionado en móvil */
-    .nav-whatsapp {
-        padding: 5px 12px;
-        font-size: 0.85rem;
-        background: rgba(34, 197, 94, 0.15);
-        border: 1px solid rgba(34, 197, 94, 0.4);
-        border-radius: 20px;
-    }
     .whatsapp-icon {
-        width: 16px !important;
-        height: 16px !important;
-        min-width: 16px;
-        min-height: 16px;
-        fill: #22c55e !important;
+        width: 15px !important;
+        height: 15px !important;
+    }
+
+    .slogan-bar {
+        font-size: 0.78px;
+        padding: 3px 8px;
     }
 
     .nav-links {
