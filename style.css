@@ -49,10 +49,13 @@ nav {
     align-items: center;
 }
 
+/* Logo Agrandado y convertido a Blanco Puro */
 .brand-logo {
-    height: 65px !important; /* Logo más grande como pidió Ricardo */
+    height: 70px !important; 
     width: auto;
     object-fit: contain;
+    filter: brightness(0) invert(1); /* 🪄 Magia: Convierte todo el logo a blanco */
+    opacity: 0.95; /* Lo suaviza un poco para que no lastime la vista */
 }
 
 /* Botón de WhatsApp */
