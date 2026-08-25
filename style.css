@@ -28,23 +28,59 @@ nav {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    max-width: 1100px;
+    max-width: 1150px;
     margin: 0 auto;
-    padding: 12px 20px;
+    padding: 10px 20px;
+    gap: 20px; /* Evita que el menú y el logo choquen */
 }
 
-/* Logo Agrandado */
+/* Grupo de Marca (Logo + WhatsApp + Eslogan) */
+.nav-brand-group {
+    display: flex;
+    align-items: center;
+    gap: 15px; /* Espacio entre el logo, WhatsApp y el eslogan */
+}
+
 .logo-container {
     display: flex;
     align-items: center;
 }
 
+/* Logo ZUMA AGRANDADO */
 .brand-logo {
-    height: 52px; /* Aumentado de 40px a 52px para mayor presencia */
+    height: 75px; /* Altura significativamente mayor */
     width: auto;
     object-fit: contain;
 }
 
+/* Botón de WhatsApp pequeño y sutil */
+.nav-whatsapp-minimal {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    color: #4ade80;
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 0.9rem;
+    border: 1px solid rgba(74, 222, 128, 0.3);
+    padding: 4px 12px;
+    border-radius: 15px;
+    background: rgba(74, 222, 128, 0.1);
+    transition: all 0.2s ease;
+}
+
+.nav-whatsapp-minimal:hover {
+    background: rgba(74, 222, 128, 0.2);
+    border-color: #4ade80;
+}
+
+.whatsapp-icon {
+    width: 16px;
+    height: 16px;
+    fill: #4ade80;
+}
+
+/* Eslogan */
 .slogan-bar {
     font-size: 0.95rem;
     color: #38BDF8;
@@ -56,6 +92,7 @@ nav {
     border: 1px solid rgba(56, 189, 248, 0.3);
 }
 
+/* Enlaces de Menú Derecho */
 .nav-links {
     list-style: none;
     display: flex;
@@ -87,34 +124,6 @@ nav {
 
 .nav-btn:hover {
     background: #0369A1;
-}
-
-/* Botón de WhatsApp en la barra superior */
-.nav-whatsapp {
-    display: flex;
-    align-items: center;
-    gap: 8px;
-    background: rgba(34, 197, 94, 0.15);
-    border: 1px solid rgba(34, 197, 94, 0.4);
-    padding: 6px 14px;
-    border-radius: 20px;
-    color: #4ade80;
-    text-decoration: none;
-    font-weight: 600;
-    font-size: 0.9rem;
-    transition: all 0.2s ease;
-}
-
-.nav-whatsapp:hover {
-    background: rgba(34, 197, 94, 0.25);
-    border-color: #22c55e;
-    transform: translateY(-1px);
-}
-
-.whatsapp-icon {
-    width: 18px;
-    height: 18px;
-    fill: #22c55e;
 }
 
 /* --- Sección Hero con Tinte Azul Muy Tenue, Brillo y Láser --- */
@@ -656,11 +665,20 @@ footer {
         gap: 12px;
         padding: 12px 10px;
     }
+    
+    /* En móvil, acomodamos Logo, WhatsApp y Eslogan centrados y en orden */
+    .nav-brand-group {
+        flex-direction: column;
+        align-items: center;
+        gap: 8px;
+        width: 100%;
+    }
+    
     .brand-logo {
-        height: 48px;
+        height: 65px; /* Sigue siendo grande en móvil */
     }
     .slogan-bar {
-        font-size: 0.8rem;
+        font-size: 0.85rem;
         padding: 3px 10px;
         margin-bottom: 2px;
     }
@@ -682,11 +700,7 @@ footer {
     .nav-btn {
         padding: 5px 12px !important;
     }
-    .nav-whatsapp {
-        padding: 5px 12px;
-        font-size: 0.85rem;
-    }
-
+    
     .container {
         padding-left: 15px !important;
         padding-right: 15px !important;
