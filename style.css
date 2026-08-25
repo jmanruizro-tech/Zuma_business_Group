@@ -30,18 +30,19 @@ nav {
     align-items: center;
     max-width: 1100px;
     margin: 0 auto;
-    padding: 15px 20px;
+    padding: 12px 20px;
 }
 
-.logo {
-    font-size: 1.4rem;
-    font-weight: 700;
-    color: #FFFFFF;
-    letter-spacing: 1px;
+/* Logo Agrandado */
+.logo-container {
+    display: flex;
+    align-items: center;
 }
 
-.logo span {
-    color: #38BDF8;
+.brand-logo {
+    height: 52px; /* Aumentado de 40px a 52px para mayor presencia */
+    width: auto;
+    object-fit: contain;
 }
 
 .slogan-bar {
@@ -55,16 +56,16 @@ nav {
     border: 1px solid rgba(56, 189, 248, 0.3);
 }
 
-nav ul {
+.nav-links {
     list-style: none;
     display: flex;
-    gap: 20px;
+    gap: 18px;
     align-items: center;
     margin: 0;
     padding: 0;
 }
 
-nav ul li a {
+.nav-links li a {
     text-decoration: none;
     color: #94A3B8;
     font-weight: 500;
@@ -72,7 +73,7 @@ nav ul li a {
     transition: color 0.2s;
 }
 
-nav ul li a:hover {
+.nav-links li a:hover {
     color: #38BDF8;
 }
 
@@ -88,7 +89,35 @@ nav ul li a:hover {
     background: #0369A1;
 }
 
-/* --- Sección Hero con Tinte Azul Muy Tenue --- */
+/* Botón de WhatsApp en la barra superior */
+.nav-whatsapp {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    background: rgba(34, 197, 94, 0.15);
+    border: 1px solid rgba(34, 197, 94, 0.4);
+    padding: 6px 14px;
+    border-radius: 20px;
+    color: #4ade80;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 0.9rem;
+    transition: all 0.2s ease;
+}
+
+.nav-whatsapp:hover {
+    background: rgba(34, 197, 94, 0.25);
+    border-color: #22c55e;
+    transform: translateY(-1px);
+}
+
+.whatsapp-icon {
+    width: 18px;
+    height: 18px;
+    fill: #22c55e;
+}
+
+/* --- Sección Hero con Tinte Azul Muy Tenue, Brillo y Láser --- */
 .hero {
     position: relative;
     background: linear-gradient(rgba(11, 19, 43, 0.35), rgba(11, 19, 43, 0.35)), url('Header_logo.jpeg');
@@ -104,6 +133,27 @@ nav ul li a:hover {
 
 .hero > * {
     filter: none;
+}
+
+/* Efecto de láser Cyberpunk en la cabecera */
+.hero::after {
+    content: '';
+    position: absolute;
+    top: -100%;
+    left: 0;
+    width: 100%;
+    height: 3px;
+    background: linear-gradient(90deg, transparent, rgba(56, 189, 248, 0.9), transparent);
+    box-shadow: 0 0 20px rgba(56, 189, 248, 0.9);
+    z-index: 2;
+    animation: laserScan 6s ease-in-out infinite;
+    pointer-events: none;
+}
+
+@keyframes laserScan {
+    0% { top: -10%; }
+    50% { top: 100%; }
+    100% { top: 100%; }
 }
 
 /* Efecto de radiación de luz animada */
@@ -591,23 +641,11 @@ footer {
     font-size: 0.85rem;
 }
 
-/* --- Estilo para el Logo en la Barra de Navegación --- */
-.logo-container {
-    display: flex;
-    align-items: center;
-}
-
-.brand-logo {
-    height: 40px;
-    width: auto;
-    object-fit: contain;
-}
 
 /* ==========================================================
-   --- CORRECCIÓN MÓVIL DEFINITIVA (iPhone / ANDROID) ---
+   --- OPTIMIZACIÓN MÓVIL DEFINITIVA (iPhone / iOS) ---
    ========================================================== */
 @media (max-width: 768px) {
-    /* 1. Menú superior elegante y perfectamente centrado */
     header {
         position: sticky;
         top: 0;
@@ -615,43 +653,40 @@ footer {
     nav {
         flex-direction: column;
         align-items: center;
-        gap: 10px;
+        gap: 12px;
         padding: 12px 10px;
     }
     .brand-logo {
-        height: 35px;
+        height: 48px;
     }
     .slogan-bar {
         font-size: 0.8rem;
         padding: 3px 10px;
         margin-bottom: 2px;
     }
-    nav ul {
+    .nav-links {
         display: flex;
         flex-direction: row;
         justify-content: center;
         align-items: center;
         flex-wrap: wrap;
-        gap: 10px 15px;
+        gap: 8px 12px;
         padding: 0;
         margin: 0;
         width: 100%;
     }
-    nav ul li {
-        margin: 0;
+    .nav-links li a {
+        font-size: 0.85rem;
+        padding: 4px 6px;
     }
-    nav ul li a {
-        font-size: 0.88rem;
-        padding: 5px 8px;
-    }
-    /* Estilo limpio para los botones de navegación en móvil */
     .nav-btn {
-        background: #0284C7 !important;
-        padding: 6px 14px !important;
-        border-radius: 6px;
+        padding: 5px 12px !important;
+    }
+    .nav-whatsapp {
+        padding: 5px 12px;
+        font-size: 0.85rem;
     }
 
-    /* 2. Alineación absoluta de las secciones 2 y 4 (Adiós desplazamiento a la derecha) */
     .container {
         padding-left: 15px !important;
         padding-right: 15px !important;
@@ -664,7 +699,6 @@ footer {
         padding: 45px 12px !important;
     }
 
-    /* Forzar que las tarjetas de servicios y categorías ocupen el 100% y estén centradas */
     .service-category, 
     .plans-grid, 
     .fiscal-grid, 
@@ -685,7 +719,21 @@ footer {
         padding: 22px 15px !important;
     }
 
-    /* 3. Ajuste del teléfono en soporte y campos de formulario */
+    .fiscal-grid {
+        display: flex !important;
+        flex-direction: column !important;
+        gap: 15px !important;
+        margin: 0 !important;
+        padding: 0 !important;
+    }
+    .fiscal-box {
+        width: 100% !important;
+        max-width: 100% !important;
+        box-sizing: border-box !important;
+        margin: 0 !important;
+        padding: 20px 15px !important;
+    }
+
     .contact-highlights span {
         display: inline-block;
         width: 100%;
@@ -700,49 +748,5 @@ footer {
     .form-group textarea {
         width: 100% !important;
         box-sizing: border-box !important;
-    }
-}
-/* --- Efecto Dinámico de Láser Cyberpunk en la Sección Hero --- */
-.hero::after {
-    content: '';
-    position: absolute;
-    top: -100%;
-    left: 0;
-    width: 100%;
-    height: 3px;
-    background: linear-gradient(90deg, transparent, rgba(56, 189, 248, 0.9), transparent);
-    box-shadow: 0 0 20px rgba(56, 189, 248, 0.9);
-    z-index: 2;
-    animation: laserScan 6s ease-in-out infinite;
-    pointer-events: none;
-}
-
-@keyframes laserScan {
-    0% {
-        top: -10%;
-    }
-    50% {
-        top: 100%;
-    }
-    100% {
-        top: 100%;
-    }
-}
-/* --- Corrección Absoluta para la Sección 2 (Servicios Contables y Fiscales) en iPhone --- */
-@media (max-width: 768px) {
-    .fiscal-grid {
-        display: flex !important;
-        flex-direction: column !important;
-        width: 100% !important;
-        gap: 15px !important;
-        margin: 0 !important;
-        padding: 0 !important;
-    }
-    .fiscal-box {
-        width: 100% !important;
-        max-width: 100% !important;
-        box-sizing: border-box !important;
-        margin: 0 !important;
-        padding: 20px 15px !important;
     }
 }
