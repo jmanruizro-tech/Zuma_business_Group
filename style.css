@@ -88,21 +88,23 @@ nav ul li a:hover {
     background: #0369A1;
 }
 
-/* --- Sección Hero con la Imagen Totalmente Brillante y Nítida --- */
+/* --- Sección Hero con Tinte Azul Muy Tenue (Equilibrio perfecto) --- */
 .hero {
     position: relative;
-    background: url('Header_logo.jpeg');
+    /* Combinamos un velo azul financiero muy sutil (0.35 de opacidad) con la imagen */
+    background: linear-gradient(rgba(11, 19, 43, 0.35), rgba(11, 19, 43, 0.35)), url('Header_logo.jpeg');
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
-    filter: brightness(1.25) contrast(1.15); /* Eleva la luz para que la ciudad y la ventana resalten */
+    /* Dejamos un brillo moderado para que la imagen se vea viva pero con el tono azulado corporativo */
+    filter: brightness(1.1) contrast(1.05);
     padding: 130px 20px 110px 20px;
     text-align: center;
     border-bottom: 1px solid #1E293B;
     overflow: hidden;
 }
 
-/* Forzamos a que el contenido interno ignore el filtro de brillo de la imagen */
+/* Forzamos a que el contenido interno ignore el filtro general */
 .hero > * {
     filter: none;
 }
