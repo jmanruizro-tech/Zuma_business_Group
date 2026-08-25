@@ -88,17 +88,37 @@ nav ul li a:hover {
     background: #0369A1;
 }
 
-/* --- Sección Hero --- */
+/* --- Sección Hero con Fondo Corporativo y Radiación de Luz --- */
 .hero {
-    background: linear-gradient(135deg, #0B132B 0%, #1C2541 100%);
-    padding: 100px 20px;
+    position: relative;
+    background: linear-gradient(rgba(11, 19, 43, 0.85), rgba(11, 19, 43, 0.92)), url('Header_logo.jpeg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    padding: 120px 20px 100px 20px;
     text-align: center;
     border-bottom: 1px solid #1E293B;
+    overflow: hidden;
+}
+
+/* Efecto de radiación de luz superior (Glow FinTech) */
+.hero-glow {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 60%;
+    height: 300px;
+    background: radial-gradient(circle, rgba(56, 189, 248, 0.25) 0%, rgba(14, 165, 233, 0.05) 50%, transparent 80%);
+    pointer-events: none;
+    z-index: 1;
 }
 
 .hero-content {
     max-width: 850px;
     margin: 0 auto;
+    position: relative;
+    z-index: 2;
 }
 
 .hero h1 {
@@ -123,11 +143,21 @@ nav ul li a:hover {
     margin-bottom: 40px;
 }
 
-.feature-item {
-    background: #1C2541;
+/* Tarjetas flotantes con efecto vidrio (Glassmorphism) */
+.hero .feature-item {
+    background: rgba(28, 37, 65, 0.85);
+    backdrop-filter: blur(8px);
     padding: 20px;
     border-radius: 10px;
-    border: 1px solid #3A506B;
+    border: 1px solid rgba(56, 189, 248, 0.3);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
+    transition: all 0.3s ease;
+}
+
+.hero .feature-item:hover {
+    border-color: #38BDF8;
+    transform: translateY(-3px);
+    box-shadow: 0 0 20px rgba(56, 189, 248, 0.2);
 }
 
 /* --- Botones --- */
@@ -542,7 +572,7 @@ footer {
     font-size: 0.85rem;
 }
 
-/* --- Estilo para el Logo en la Barra de Navegación (Añadido al final) --- */
+/* --- Estilo para el Logo en la Barra de Navegación --- */
 .logo-container {
     display: flex;
     align-items: center;
