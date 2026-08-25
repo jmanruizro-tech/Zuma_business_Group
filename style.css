@@ -604,60 +604,100 @@ footer {
 }
 
 /* ==========================================================
-   --- CORRECCIÓN FINES DE DISEÑO MÓVIL (iPhone / ANDROID) ---
+   --- CORRECCIÓN MÓVIL DEFINITIVA (iPhone / ANDROID) ---
    ========================================================== */
 @media (max-width: 768px) {
-    /* 1. Menú de navegación ordenado en una sola fila compacta o lista limpia */
+    /* 1. Menú superior elegante y perfectamente centrado */
+    header {
+        position: sticky;
+        top: 0;
+    }
     nav {
         flex-direction: column;
-        gap: 8px;
-        padding: 10px 10px;
+        align-items: center;
+        gap: 10px;
+        padding: 12px 10px;
     }
     .brand-logo {
-        height: 32px; /* Logo ligeramente más compacto en móvil */
+        height: 35px;
     }
     .slogan-bar {
         font-size: 0.8rem;
-        padding: 3px 8px;
-        margin-bottom: 5px;
+        padding: 3px 10px;
+        margin-bottom: 2px;
     }
     nav ul {
         display: flex;
         flex-direction: row;
-        flex-wrap: wrap;
         justify-content: center;
-        gap: 8px 12px;
+        align-items: center;
+        flex-wrap: wrap;
+        gap: 10px 15px;
         padding: 0;
+        margin: 0;
+        width: 100%;
+    }
+    nav ul li {
         margin: 0;
     }
     nav ul li a {
-        font-size: 0.85rem;
-        padding: 4px 6px;
+        font-size: 0.88rem;
+        padding: 5px 8px;
     }
+    /* Estilo limpio para los botones de navegación en móvil */
     .nav-btn {
-        padding: 5px 12px !important;
+        background: #0284C7 !important;
+        padding: 6px 14px !important;
+        border-radius: 6px;
     }
 
-    /* 2. Corrección de la caja de teléfono en Soporte */
+    /* 2. Alineación absoluta de las secciones 2 y 4 (Adiós desplazamiento a la derecha) */
+    .container {
+        padding-left: 15px !important;
+        padding-right: 15px !important;
+        box-sizing: border-box !important;
+        margin: 0 auto !important;
+        width: 100% !important;
+    }
+
+    section {
+        padding: 45px 12px !important;
+    }
+
+    /* Forzar que las tarjetas de servicios y categorías ocupen el 100% y estén centradas */
+    .service-category, 
+    .plans-grid, 
+    .fiscal-grid, 
+    .insurance-steps, 
+    .mission-vision-grid,
+    .service-scope, 
+    .about-card, 
+    .mv-box, 
+    .values-box, 
+    .objectives-box,
+    .quote-container, 
+    .contact-container {
+        width: 100% !important;
+        max-width: 100% !important;
+        margin-left: 0 !important;
+        margin-right: 0 !important;
+        box-sizing: border-box !important;
+        padding: 22px 15px !important;
+    }
+
+    /* 3. Ajuste del teléfono en soporte y campos de formulario */
     .contact-highlights span {
         display: inline-block;
         width: 100%;
         box-sizing: border-box;
         font-size: 0.95rem;
         padding: 12px 10px;
-        word-break: break-word; /* Evita que el número se corte de forma extraña */
+        word-break: break-word;
     }
 
-    /* 3. Ajuste de formularios para que los botones no rebasen contenedores */
-    .quote-container, .contact-container {
-        padding: 20px 12px !important;
-        width: 100% !important;
-        box-sizing: border-box !important;
-    }
-    .quote-container form, .contact-container form {
-        width: 100%;
-    }
-    .btn-primary.full-width, .contact-container .btn-primary {
+    .form-group input, 
+    .form-group select, 
+    .form-group textarea {
         width: 100% !important;
         box-sizing: border-box !important;
     }
