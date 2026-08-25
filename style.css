@@ -728,3 +728,21 @@ footer {
         top: 100%;
     }
 }
+/* --- Corrección Absoluta para la Sección 2 (Servicios Contables y Fiscales) en iPhone --- */
+@media (max-width: 768px) {
+    .fiscal-grid {
+        display: flex !important;
+        flex-direction: column !important;
+        width: 100% !important;
+        gap: 15px !important;
+        margin: 0 !important;
+        padding: 0 !important;
+    }
+    .fiscal-box {
+        width: 100% !important;
+        max-width: 100% !important;
+        box-sizing: border-box !important;
+        margin: 0 !important;
+        padding: 20px 15px !important;
+    }
+}
