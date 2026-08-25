@@ -88,41 +88,47 @@ nav ul li a:hover {
     background: #0369A1;
 }
 
-/* --- Sección Hero con Fondo Vivo y Animación de Luminosidad --- */
+/* --- Sección Hero con la Imagen Totalmente Brillante y Nítida --- */
 .hero {
     position: relative;
-    background: linear-gradient(rgba(11, 19, 43, 0.35), rgba(11, 19, 43, 0.65)), url('Header_logo.jpeg');
+    background: url('Header_logo.jpeg');
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
+    filter: brightness(1.25) contrast(1.15); /* Eleva la luz para que la ciudad y la ventana resalten */
     padding: 130px 20px 110px 20px;
     text-align: center;
     border-bottom: 1px solid #1E293B;
     overflow: hidden;
 }
 
-/* Efecto de radiación de luz animada (Pulso lumínico en la ventana) */
+/* Forzamos a que el contenido interno ignore el filtro de brillo de la imagen */
+.hero > * {
+    filter: none;
+}
+
+/* Efecto de radiación de luz animada más brillante en la ventana */
 .hero-glow {
     position: absolute;
-    top: 5%;
+    top: 2%;
     left: 50%;
     transform: translateX(-50%);
-    width: 75%;
-    height: 400px;
-    background: radial-gradient(circle, rgba(56, 189, 248, 0.35) 0%, rgba(14, 165, 233, 0.15) 45%, transparent 75%);
+    width: 80%;
+    height: 450px;
+    background: radial-gradient(circle, rgba(56, 189, 248, 0.5) 0%, rgba(14, 165, 233, 0.2) 45%, transparent 75%);
     pointer-events: none;
     z-index: 1;
-    animation: pulseGlow 4s ease-in-out infinite alternate;
+    animation: pulseGlow 3.5s ease-in-out infinite alternate;
 }
 
 @keyframes pulseGlow {
     0% {
-        opacity: 0.6;
+        opacity: 0.7;
         transform: translateX(-50%) scale(0.95);
     }
     100% {
         opacity: 1;
-        transform: translateX(-50%) scale(1.05);
+        transform: translateX(-50%) scale(1.08);
     }
 }
 
