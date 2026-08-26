@@ -23,6 +23,7 @@ header {
     top: 0;
     z-index: 1000;
     width: 100%;
+    overflow: visible; /* 🪄 Permite que el logo grande flote elegantemente sin romper la marquesina */
 }
 
 nav {
@@ -50,7 +51,7 @@ nav {
 }
 
 .brand-logo {
-    height: 65px !important; 
+    height: 82px !important; 
     width: auto;
     object-fit: contain;
     /* Sombra azul oscura para ocultar el pixelado blanco y potenciar contraste */
