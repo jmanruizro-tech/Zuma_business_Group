@@ -43,7 +43,7 @@ nav {
     white-space: nowrap;
 }
 
-/* Logo Agrandado en Blanco Puro (FinTech Style) */
+/* Logo Agrandado con colores originales y camuflaje de bordes pixelados */
 .logo-container {
     display: flex;
     align-items: center;
@@ -53,8 +53,8 @@ nav {
     height: 65px !important; 
     width: auto;
     object-fit: contain;
-    filter: brightness(0) invert(1);
-    opacity: 0.95;
+    /* Sombra azul oscura para ocultar el pixelado blanco y potenciar contraste */
+    filter: drop-shadow(0px 0px 3px rgba(11, 19, 43, 0.9)) contrast(1.15) saturate(1.1);
 }
 
 /* Botón de WhatsApp en Azul Armónico */
