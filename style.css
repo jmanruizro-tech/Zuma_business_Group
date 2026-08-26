@@ -29,36 +29,35 @@ nav {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    max-width: 1250px; /* Más ancho para asegurar que quepa todo en una línea */
+    max-width: 1300px;
     margin: 0 auto;
     padding: 10px 20px;
 }
 
-/* GRUPO IZQUIERDO: Estrictamente una sola línea horizontal en PC */
+/* Grupo Izquierdo: Logo y WhatsApp */
 .nav-left-group {
     display: flex;
-    flex-direction: row !important; /* Fuerza que estén uno a lado del otro */
+    flex-direction: row !important;
     align-items: center;
-    gap: 15px; /* Espacio entre logo, whatsapp y eslogan */
-    white-space: nowrap; /* Evita que se vayan hacia abajo */
+    gap: 15px;
+    white-space: nowrap;
 }
 
-/* Logo Agrandado y Estilizado */
+/* Logo Agrandado en Blanco Puro (FinTech Style) */
 .logo-container {
     display: flex;
     align-items: center;
 }
 
-/* Logo Agrandado con camuflaje de bordes pixelados */
 .brand-logo {
     height: 65px !important; 
     width: auto;
     object-fit: contain;
-    /* 🪄 Magia: Sombra azul oscura para ocultar el pixelado blanco y más contraste */
-    filter: drop-shadow(0px 0px 3px rgba(11, 19, 43, 0.9)) contrast(1.15) saturate(1.1);
+    filter: brightness(0) invert(1);
+    opacity: 0.95;
 }
 
-/* Botón de WhatsApp integrado al estilo Azul FinTech */
+/* Botón de WhatsApp en Azul Armónico */
 .nav-whatsapp {
     display: flex;
     flex-direction: row;
@@ -68,7 +67,7 @@ nav {
     border: 1px solid rgba(56, 189, 248, 0.3);
     padding: 6px 14px;
     border-radius: 20px;
-    color: #38BDF8; /* Azul claro corporativo */
+    color: #38BDF8;
     text-decoration: none;
     font-weight: 600;
     font-size: 0.95rem;
@@ -85,29 +84,19 @@ nav {
     width: 18px !important;
     height: 18px !important;
     min-width: 18px;
-    fill: #38BDF8 !important; /* Icono en azul */
+    fill: #38BDF8 !important;
     flex-shrink: 0;
 }
 
-/* Eslogan */
-.slogan-bar {
-    font-size: 0.95rem;
-    color: #38BDF8;
-    font-weight: 600;
-    font-style: italic;
-    background: rgba(56, 189, 248, 0.1);
-    padding: 6px 12px;
-    border-radius: 20px;
-    border: 1px solid rgba(56, 189, 248, 0.3);
-}
-
-/* Menús Derechos */
+/* Menús Centrales Centrados */
 .nav-links {
     list-style: none;
     display: flex;
     gap: 15px;
     align-items: center;
-    margin: 0;
+    justify-content: center;
+    flex: 1;
+    margin: 0 20px;
     padding: 0;
     white-space: nowrap;
 }
@@ -136,6 +125,19 @@ nav {
     background: #0369A1;
 }
 
+/* Eslogan a la Derecha */
+.slogan-bar {
+    font-size: 0.95rem;
+    color: #38BDF8;
+    font-weight: 600;
+    font-style: italic;
+    background: rgba(56, 189, 248, 0.1);
+    padding: 6px 12px;
+    border-radius: 20px;
+    border: 1px solid rgba(56, 189, 248, 0.3);
+    white-space: nowrap;
+}
+
 /* --- Sección Hero --- */
 .hero {
     position: relative;
@@ -150,9 +152,7 @@ nav {
     overflow: hidden;
 }
 
-.hero > * {
-    filter: none;
-}
+.hero > * { filter: none; }
 
 /* Láser Cyberpunk */
 .hero::after {
@@ -241,7 +241,7 @@ nav {
     box-shadow: 0 20px 40px rgba(0, 0, 0, 0.6), 0 0 25px rgba(56, 189, 248, 0.3);
 }
 
-/* --- Botones Generales --- */
+/* --- Botones --- */
 .btn-primary {
     display: inline-block;
     background: #0EA5E9;
@@ -340,7 +340,7 @@ footer { background-color: #070C1B; color: #64748B; padding: 30px 20px; text-ali
 
 
 /* ==========================================================
-   --- OPTIMIZACIÓN MÓVIL (iPhone / Android) ---
+   --- OPTIMIZACIÓN MÓVIL (iPhone / iOS) ---
    ========================================================== */
 @media (max-width: 950px) { 
     
@@ -353,29 +353,12 @@ footer { background-color: #070C1B; color: #64748B; padding: 30px 20px; text-ali
         padding: 15px 10px;
     }
 
-    /* En móvil se apilan hacia abajo centraditos para que quepan */
-    .nav-left-group {
-        flex-direction: column !important;
-        justify-content: center;
-        gap: 10px;
-        width: 100%;
-        white-space: normal;
-    }
+    /* Orden visual en móvil usando Flex order para conservar la estructura limpia */
+    .nav-left-group { order: 1; flex-direction: column !important; justify-content: center; gap: 10px; width: 100%; white-space: normal; }
+    .slogan-bar { order: 2; margin-bottom: 5px; white-space: normal; }
+    .nav-links { order: 3; display: flex; flex-direction: row; justify-content: center; align-items: center; flex-wrap: wrap; gap: 10px 12px; padding: 0; margin: 0; width: 100%; white-space: normal; flex: unset; }
 
     .brand-logo { height: 50px !important; }
-
-    .nav-links {
-        display: flex;
-        flex-direction: row;
-        justify-content: center;
-        align-items: center;
-        flex-wrap: wrap;
-        gap: 10px 12px;
-        padding: 0;
-        margin: 0;
-        width: 100%;
-        white-space: normal;
-    }
 
     .nav-links li a { font-size: 0.9rem; padding: 4px 6px; }
     .nav-btn { padding: 6px 12px !important; }
@@ -412,7 +395,7 @@ footer { background-color: #070C1B; color: #64748B; padding: 30px 20px; text-ali
         padding: 20px 15px !important;
     }
 
-    /* --- CORRECCIÓN: Caja de teléfono en iPhone SE --- */
+    /* Caja de teléfono en iPhone SE */
     .contact-highlights span {
         display: block !important;
         width: 100%;
